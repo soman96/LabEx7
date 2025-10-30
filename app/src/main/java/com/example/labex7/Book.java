@@ -3,7 +3,6 @@ package com.example.labex7;
 import androidx.annotation.NonNull;
 
 public class Book {
-
     private int id;
     private String title;
     private String author;

@@ -86,4 +86,12 @@ public class DbHelper extends SQLiteOpenHelper {
         // Get all books from the database
         return db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
+
+    public Cursor getBookById(int id) {
+        // Readable database instance
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // Get book from the database
+        return db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COL_ID + "=?", new String[]{String.valueOf(id)});
+    }
 }
